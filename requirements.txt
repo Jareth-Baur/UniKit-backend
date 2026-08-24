@@ -1,6 +1,11 @@
 fastapi
-uvicorn
+uvicorn[standard]
 python-multipart
-rembg
-paddleocr
+
+Pillow
+numpy
+
+rembg[cpu]
+easyocr
+
 faster-whisper
