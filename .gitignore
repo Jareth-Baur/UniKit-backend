@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+secrets.toml
+
+# FastAPI / Uvicorn Logs
+*.log
+logs/
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.egg-info/
+.tox/
+
+# Local Database Files (SQLite / SQLModel)
+*.db
+*.sqlite
+*.sqlite3
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

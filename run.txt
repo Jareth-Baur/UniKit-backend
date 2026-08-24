@@ -1,0 +1,11 @@
+Create virtual environment for UniKit backend
+    ppython -m venv .venv
+
+Activate it
+    .venv\Scripts\Activate.ps1
+
+Install dependencies
+    pip install -r requirements.txt
+
+Run the backend
+uvicorn app.main:app --reload
