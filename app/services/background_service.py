@@ -1,6 +1,3 @@
-from rembg import remove
-
-
 def remove_background(image_data: bytes) -> bytes:
     """
     Remove the background from an image.
@@ -9,6 +6,6 @@ def remove_background(image_data: bytes) -> bytes:
         PNG image bytes with transparent background.
     """
 
-    result = remove(image_data)
+    from rembg import remove
 
-    return result
+    return remove(image_data)
