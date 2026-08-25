@@ -31,7 +31,11 @@ def extract_text(image_data: bytes) -> dict:
         detections = []
 
         for result in results:
-            bounding_box = result[0]
+            bounding_box = [
+                [int(x), int(y)]
+                for x, y in result[0]
+            ]
+
             text = result[1]
             confidence = float(result[2])
 

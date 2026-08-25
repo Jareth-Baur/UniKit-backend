@@ -1,4 +1,4 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException
+from fastapi import APIRouter, UploadFile, File
 
 from app.services.ocr_service import extract_text
 from app.utils.file_validation import validate_image

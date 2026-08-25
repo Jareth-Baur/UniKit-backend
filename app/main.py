@@ -10,7 +10,7 @@ from app.routers import (
 
 app = FastAPI(
     title="UniKit API",
-    description="Free utilities for students",
+    description="Free utilities for everyone.",
     version="1.0.0"
 )
 
