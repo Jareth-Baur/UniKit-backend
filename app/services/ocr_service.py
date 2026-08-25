@@ -5,11 +5,19 @@ import numpy as np
 from PIL import Image
 
 
-# Load the model once when the application starts.
-reader = easyocr.Reader(
-    ["en"],
-    gpu=False
-)
+reader = None
+
+
+def get_reader():
+    global reader
+
+    if reader is None:
+        reader = easyocr.Reader(
+            ["en"],
+            gpu=False
+        )
+
+    return reader
 
 
 def extract_text(image_data: bytes) -> dict:
@@ -24,7 +32,7 @@ def extract_text(image_data: bytes) -> dict:
 
         image_array = np.array(image)
 
-        results = reader.readtext(
+        results = get_reader().readtext(
             image_array
         )
 
